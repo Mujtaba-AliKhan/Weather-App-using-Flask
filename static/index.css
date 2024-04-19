@@ -1,0 +1,133 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(#709fbc, #034269);
+  height: 100%;
+  background-size: cover;
+  color: #fff;
+}
+.container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.subContainer {
+  width: 600px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.iconContainer {
+  margin-bottom: 20px;
+  filter: drop-shadow(5px 5px 5px black);
+  text-align: center;
+}
+
+h1,
+h2 {
+  text-align: center;
+  filter: drop-shadow(2px 2px black);
+}
+
+input[type="text"] {
+  padding: 12px;
+  width: 70%;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #333;
+}
+
+button {
+  padding: 12px 24px;
+  background-color: #ffcc00;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ffdb4d;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.header .toggle-container {
+  position: absolute;
+  right: 0;
+}
+.toggle-container {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.toggle-switch input {
+  display: none;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #3ef5ac;
+  transition: 0.4s;
+  border-radius: 34px;
+  display: flex;
+  align-items: center;
+}
+
+.toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .toggle-slider {
+  background-color: #2196f3;
+}
+
+input:checked + .toggle-slider:before {
+  transform: translateX(26px);
+}
+
+.unit-label {
+  margin: 0 3px;
+  margin-bottom: 3px;
+  filter: drop-shadow(2px 2px #000000);
+  color: #00ffc3;
+  transition: all 0.3s ease-in-out;
+}
+.unit-f {
+  position: absolute;
+  right: 7px;
+  color: #2196f3;
+}

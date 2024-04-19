@@ -1,0 +1,62 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  color: #fff;
+  background-size: cover;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+.subContainer {
+  width: 600px;
+  height: fit-content;
+  margin: 2rem 0;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+h1,
+h2 {
+  filter: drop-shadow(1px 1px black);
+  text-align: center;
+}
+h3 {
+  filter: drop-shadow(1px 1px black);
+}
+.weatherinfoContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+}
+.tempContainer h1,
+h2 {
+  text-align: left;
+}
+.tempContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+}
+.backButton {
+  text-align: right;
+}
+.backButton a {
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 2px 15px;
+}
+.backButton a:hover {
+  filter: drop-shadow(1px 1px 4px black);
+  color: #e7e7e7;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Info</title>
+    <link rel="stylesheet" href="../static/weather.css" />
+    <style>
+      body {
+        background-image: url("../static/Images/{{ weather.background_image }}");
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="subContainer">
+        <!-- <p>{{allweather}}</p> -->
+        <h1>{{ weather.city }}, {{weather.country}}</h1>
+        <div class="gifContainer">
+          <img src="" alt="" />
+        </div>
+
+        <div class="tempContainer">
+          <div>
+            <h1 style="font-size: 3rem">
+              {{ weather.temperature }}°{{weather.unitValue}}
+            </h1>
+            <h2 style="text-align: center">{{ weather.description }}</h2>
+          </div>
+          <div>
+            <img
+              src="../static/weather-icons/{{ weather.weather_icon }}"
+              alt="weather icon"
+              height="200"
+            />
+          </div>
+        </div>
+        <div class="weatherinfoContainer">
+          <div>
+            <h3>Feels Like: {{weather.feels_like}}°{{weather.unitValue}}</h3>
+            <h3>Minumum: {{weather.min_temp}}°{{weather.unitValue}}</h3>
+            <h3>Maximum: {{weather.max_temp}}°{{weather.unitValue}}</h3>
+          </div>
+          <div>
+            <h3>Humidity: {{ weather.humidity }}%</h3>
+            <h3>
+              Wind Speeds: {{weather.wind_speed}} {{weather.distanceUnit}}
+            </h3>
+            <h3>Visibility: {{weather.visibility}} KM</h3>
+          </div>
+        </div>
+        <div class="backButton">
+          <a href="/">Exit</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="../static/index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="subContainer">
+        <div class="iconContainer">
+          <img
+            src="../static/weather-icons/weather.svg"
+            alt=""
+            height="200px"
+          />
+        </div>
+        <form action="/weather" method="post">
+          <div class="header">
+            <h1>Weather App</h1>
+
+            <div class="toggle-container">
+              <label class="toggle-switch">
+                <input
+                  type="checkbox"
+                  id="unit-toggle"
+                  name="unit-toggle"
+                  value="true"
+                />
+                <span class="toggle-slider">
+                  <h3 class="unit-label unit-c">°C</h3>
+                  <h3 class="unit-label unit-f">°F</h3>
+                </span>
+              </label>
+            </div>
+          </div>
+          <input
+            type="text"
+            name="city"
+            placeholder="Enter city name"
+            required
+          />
+          <button type="submit">Get Weather</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      const toggleSwitch = document.getElementById("unit-toggle");
+      const unitCLabel = document.querySelector(".unit-c");
+      const unitFLabel = document.querySelector(".unit-f");
+
+      toggleSwitch.addEventListener("change", function () {
+        if (this.checked) {
+          unitCLabel.style.opacity = "0";
+          unitFLabel.style.opacity = "1";
+        } else {
+          unitCLabel.style.opacity = "1";
+          unitFLabel.style.opacity = "0";
+        }
+      });
+
+      unitCLabel.style.opacity = "1";
+      unitFLabel.style.opacity = "0";
+    </script>
+  </body>
+</html>
